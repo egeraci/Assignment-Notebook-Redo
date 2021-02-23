@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
+    var assignments = ["assignment1", "assignment2", "assignment3"]
+    
+    var body: some View
+    {
         NavigationView {
-
                     List {
 
-                        Text("First Thing")
+                       ForEach(assignments, id: \.self)
+                        {
+                            assignment in Text(assignment)
 
-                        Text("Second Thing")
 
-                        Text("Third Thing")
-
-                        Text("Fourth Thing")
-
-                        Text("Fifth Thing")
+                                        }
 
                     }
 
