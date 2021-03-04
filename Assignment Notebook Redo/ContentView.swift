@@ -17,7 +17,17 @@ struct ContentView: View {
 
                        ForEach(assignments)
                         {
-                        assignment in Text(assignment.discription)
+                        assignment in
+                        HStack{
+                        VStack(alignment: .leading)
+                            {
+                            Text(assignment.className)
+                                .font(.headline)
+                            Text(assignment.discription)
+                            }
+                            Spacer()
+                            Text(assignment.dueDate,style: .date)
+                        }
                          }
                        .onMove(perform: { indices, newOffset in
                         assignments.move(fromOffsets: indices, toOffset: newOffset)
