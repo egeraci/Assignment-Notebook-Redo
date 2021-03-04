@@ -26,6 +26,8 @@ struct AddAssignmentView: View {
                             className in Text (className)
                         }
                 }
+                TextField("Discription", text: $description)
+                DatePicker ("Due Date", selection:$dueDate, displayedComponents: .date)
             }
         }
     }
