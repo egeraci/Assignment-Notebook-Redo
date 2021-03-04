@@ -11,6 +11,7 @@
 		3F4F791A25E5B80100605426 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F791925E5B80100605426 /* ContentView.swift */; };
 		3F4F791C25E5B80600605426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4F791B25E5B80600605426 /* Assets.xcassets */; };
 		3F4F791F25E5B80600605426 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4F791E25E5B80600605426 /* Preview Assets.xcassets */; };
+		3FA2FDAF25F18FE600EFF84C /* AssignmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2FDAE25F18FE600EFF84C /* AssignmentList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3F4F791B25E5B80600605426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4F791E25E5B80600605426 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F4F792025E5B80600605426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA2FDAE25F18FE600EFF84C /* AssignmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				3F4F791725E5B80100605426 /* Assignment_Notebook_RedoApp.swift */,
 				3F4F791925E5B80100605426 /* ContentView.swift */,
+				3FA2FDAE25F18FE600EFF84C /* AssignmentList.swift */,
 				3F4F791B25E5B80600605426 /* Assets.xcassets */,
 				3F4F792025E5B80600605426 /* Info.plist */,
 				3F4F791D25E5B80600605426 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA2FDAF25F18FE600EFF84C /* AssignmentList.swift in Sources */,
 				3F4F791A25E5B80100605426 /* ContentView.swift in Sources */,
 				3F4F791825E5B80100605426 /* Assignment_Notebook_RedoApp.swift in Sources */,
 			);
