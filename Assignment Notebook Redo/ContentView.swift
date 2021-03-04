@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var assignments = ["assignment1", "assignment2", "assignment3"]
+   @State var assignments = ["assignment1", "assignment2", "assignment3"]
     
     var body: some View
     {
@@ -18,14 +18,17 @@ struct ContentView: View {
                        ForEach(assignments, id: \.self)
                         {
                             assignment in Text(assignment)
-
-
-                                        }
-
+                         }
+                       .onMove(perform: { indices, newOffset in
+                        assignments.move(fromOffsets: indices, toOffset: newOffset)
+                       })
+                       .onDelete(perform: { indexSet in
+                        assignments.remove(atOffsets: indexSet)
+                       })
                     }
 
                     .navigationBarTitle("Assinments")
-
+                    .navigationBarItems(leading: EditButton())
                 }
 
     }
