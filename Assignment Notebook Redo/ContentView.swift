@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
    @ObservedObject var assignments = AssignmentList()
+    @State private var showingAddAssignmentView = false
     var body: some View
     {
         NavigationView {
@@ -36,8 +37,13 @@ struct ContentView: View {
                        })
                     }
 
+                    .sheet(isPresented: $showingAddAssignmentView, content: {
+                        AddAssignmentView(assignmentList: assignments)
+                    })
                     .navigationBarTitle("Assinments")
-                    .navigationBarItems(leading: EditButton())
+                    .navigationBarItems(leading: EditButton(), trailing: Button(action:{ showingAddAssignmentView = true
+                        
+                    }){Image(systemName: "plus")})
                 }
 
     }
@@ -49,7 +55,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct AssignmentItem: Identifiable {
+struct AssignmentItem: Identifiable ,Codable{
     var id = UUID()
     var className = String()
     var discription = String()

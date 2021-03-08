@@ -14,6 +14,7 @@ struct AddAssignmentView: View {
     @State private var dueDate = Date()
     @Environment(\.presentationMode) var presantationMode
     static let classNames = ["Mobile Apps", "Art", "English", "PE", "Dance", "Drama", "Math","BHS-TV", "Lunch", "Civics"]
+    
     var body: some View {
         NavigationView
         {
@@ -29,6 +30,16 @@ struct AddAssignmentView: View {
                 TextField("Discription", text: $description)
                 DatePicker ("Due Date", selection:$dueDate, displayedComponents: .date)
             }
+            .navigationBarTitle("Add new assignments")
+            .navigationBarItems(trailing: Button("Save")
+            {
+                if className.count>0&&description.count > 0
+                {
+                    let assignment = AssignmentItem(id: UUID(), className: className, discription: description, dueDate: dueDate)
+                    assignmentList.assignment.append(assignment)
+                    presantationMode.wrappedValue.dismiss()
+                }
+            })
         }
     }
 }
